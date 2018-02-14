@@ -51,7 +51,7 @@ $("#searchFood").on("click", function() {
                     var recipeIngredients = results[i].recipe.ingredientLines;
                     var totalIngredients = recipeIngredients.length;
                     var recipeDiv = $("<div class='dump'>");
-                    var link = $("<p>").html("<a href='"+recipeDirections+"'>I'M GOING TO FUCKING MAKE IT NOW!</a>");
+                    var link = $("<p>").html("<a href='"+recipeDirections+"'>Show me the Recipe!</a>");
                     var displayImg = $("<img>");
                     displayImg.attr("src", recipePic);
                     var titleP = $("<p>").html("<h2>Recipe Name: " + recipeName + "<br>");
@@ -67,8 +67,8 @@ $("#searchFood").on("click", function() {
                     recipeDiv.prepend(ingredientDetails);
                     recipeDiv.prepend(displayImg);
                     recipeDiv.prepend(titleP);
-                    var save=$('<input/>').attr({ type: 'button', name:'btn1', id:'saveItem', value:'OTHER FUCKERS GET TO LOOK AT THIS'});
-                    save.addClass('waves-effect waves-light red btn');
+                    var save=$('<input/>').attr({ type: 'button', name:'btn1', id:'saveItem', value:'I like this recipe'});
+                    save.addClass('waves-effect waves-light btn');
                     recipeDiv.append(save);
                     $("#recipe").empty();
                     $("#recipe").prepend(recipeDiv);
@@ -106,7 +106,7 @@ $("#surprise").on("click", function(){
 	var recipeIngredients = snapshot.val().favoritedIngList;
 	var totalIngredients = snapshot.val().favoritedIng;
 	var recipeDiv = $("<div class='dump'>");
-	var link = $("<p>").html("<a href='"+recipeDirections+"'>I'M GOING TO MAKE IT NOW!</a>");
+	var link = $("<p>").html("<a href='"+recipeDirections+"'>Show me the Recipe!</a>");
 	var displayImg = $("<img>");
 	displayImg.attr("src", recipePic);
 	var titleP = $("<p>").html("<h2>Recipe Name: " + recipeName + "<br>");
@@ -123,7 +123,7 @@ $("#surprise").on("click", function(){
 	recipeDiv.prepend(displayImg);
 	recipeDiv.prepend(titleP);
 	var save=$('<input/>').attr({ type: 'button', name:'btn1', id:'saveItem', value:'I like this recipe'});
-	save.addClass('waves-effect waves-light red btn');
+	save.addClass('waves-effect waves-light btn');
 	recipeDiv.append(save);
 	$("#recipe").empty();
 	$("#recipe").prepend(recipeDiv);
