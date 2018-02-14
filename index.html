@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>Whats for Dinner?</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/reset.css"  />
+  <link rel="stylesheet" type="text/css" href="css/layout.css"  />
+  <link rel="stylesheet" type="text/css" href="css/supersized.css"  />
+  <link rel="stylesheet" type="text/css" href="css/menu.css"  />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css"  />
+  <link href="https://fonts.googleapis.com/css?family=Leckerli+One|Viga" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css"  />
+  <link rel="stylesheet" type="text/css" href="css/responsive.css"  />
+</head>
+<body>
+
+  <!--Logo Start-->
+  <section id="logo">
+   <h1>What Should I Cook Tonight?</h1></a>
+ </section>
+ <!--Logo End-->
+
+ <!--Intro Text Start-->
+ <section class="intro-text">
+   <h2>Having problems figuring out what to cook? </h2>
+   <h1>Use this site to decide for you!</h1>
+ </section>
+ <!--Intro Text End-->
+
+ <!--Container Start-->
+ <section>
+  <div class="container"> 
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center white-text"><i class="material-icons" id="icon-size">error_outline</i></h2>
+          <h3 class="center">Allergies?</h3>
+          <p class="light">Do you have any allergies dietary restrictions? Use the dropdown to help us decide for you</p>
+          <div class="row">
+            <div id="input2" class="col s12">
+              I am...:
+              <label>Allergies</label>
+              <select class="browser-default">
+                <option value="" disabled selected id="choose">Choose your option</option>
+                <option value="peanut-free">Peanut Free</option>
+                <option value="dairy-free">Dairy Free</option>
+                <option value="gluten-free">Gluten Free</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="shellfish-free">Shellfish Free</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center white-text"><i class="material-icons" id="icon-size">free_breakfast</i></h2>
+          <h3 class="center">Ingredients</h3>
+          <p class="light">Do you just want to cook something simple or do you want to cook something complicated? Type in the maximum amount of ingredients you want to use below.</p>
+          <div class="row">
+            <div id="input2" class="col s12">
+              How many?:
+              <div class="input-field inline">
+                <input id="ingr-input" type="text" class="">
+                <label for="ingredients">Number</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center white-text"><i class="material-icons" id="icon-size">insert_emoticon</i></h2>
+          <h3 class="center">Specific Ingredients?</h3>
+          <p class="light">Are you craving chicken or beef? Maybe you just want to finally get rid of that Christmas ham in the freezer? Well if you have a specific ingredient in mind just type it below</p>
+          <div class="row">
+            <div id="input2" class="col s12">
+              What ingredient?:
+              <div class="input-field inline">
+                <input id="query-input" type="text" class="">
+                <label for="query-input">"Chicken"</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row center">
+        <input type="submit" id="searchFood" class="waves-effect waves-light btn" value="Get My Recipe!">
+      </div>
+    </div>
+  </div>
+
+<!--Random Recipe Area-->
+  <div class="row center">
+    <div class="card">
+      <div class="card-image">
+        <img id="imagecenter" src="images/WhatDoYouWant.gif">
+      </div>
+      <div class="card-content">
+        <h3>Still having problems figuring out what to cook? Click the button below to see what is popular with our other users </h3>
+        <a id="surprise" class="waves-effect waves-light btn">Random Recipe</a>
+        <div class="container" id="recipe">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Ingredient Info Area-->
+<div class="infoDump">
+  <div class="container">
+    <div class="smallerDump">
+  <form id="ingQuery">
+    <label for="ingredient">Learn more about an ingredient!</label><br>
+    <input type="text" id="ingInput"><br>
+    <input type="submit" id="searchIngredient" class="waves-effect waves-light btn" value="WHAT IS THIS INGREDIENT?!">
+  </form>
+
+  <div id="nutrientDump">
+  </div>
+</div>
+</div>
+</div>
+</section>
+<!--Container End-->
+
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/supersized.3.2.7.js"></script>
+<script type="text/javascript" src="js/supersized.shutter.js"></script>
+<script type="text/javascript" src="js/superized-custom.js"></script>
+<script type="text/javascript" src="js/logic.js"></script>
+</body>
+</html>
